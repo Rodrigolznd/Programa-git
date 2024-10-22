@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura generada</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .invoice-container {
+            max-width: 800px;
+            margin: 25px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .invoice-header h1 {
+            margin: 0;
+        }
+
+        .invoice-info {
+            margin-bottom: 20px;
+        }
+
+        .invoice-info p {
+            margin: 5px 0;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .invoice-table th,
+        .invoice-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .invoice-table th {
+            background-color: #f2f2f2;
+        }
+
+        .invoice-total {
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .print-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .print-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <nav>
+                <a href="registro.html" class="link" style="background-color: rgb(192, 192, 192);">
+                    <img src="registro.png" alt="Registro" class="icon">
+                    <span class="title">Registro de usuarios</span>
+                </a>
+                <a href="index.html" class="link" style="background-color: rgb(192,192,192)">
+                    <img src="inventario.png" alt="Inventario" class="icon">
+                    <span class="title">Inventario</span>
+                </a>
+                <a href="facturacion.html" class="link" style="background-color: white;">
+                    <img src="factura.png" alt="Facturación" class="icon">
+                    <span class="title">Facturación</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <div class="invoice-container">
+        <div class="invoice-header">
+            <h1>Factura</h1>
+        </div>
+        <div class="invoice-info">
+            <p><strong>Cliente:</strong> Juan Perez</p>
+            <p><strong>Fecha:</strong> 2024-09-02</p>
+        </div>
+        <table class="invoice-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sofá</td>
+                    <td>2</td>
+                    <td>1.000.000</td>
+                    <td>1.000.000</td>
+                </tr>
+                <tr>
+                    <td>TV</td>
+                    <td>1</td>
+                    <td>650.000</td>
+                    <td>650.000</td>
+                </tr>
+                <tr>
+                    <td>Escritorio</td>
+                    <td>3</td>
+                    <td>500.000</td>
+                    <td>500.000</td>
+                </tr>
+                <tr>
+                    <td>Cama</td>
+                    <td>1</td>
+                    <td>400.000</td>
+                    <td>400.000</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="invoice-total">
+            <p>Total: 2.650.000 COP</p>
+        </div>
+        <div class="footer">
+            <p>Gracias por su compra.</p>
+        </div>
+        <button class="print-button" onclick="window.print()">Imprimir Factura</button>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <nav>
+                    <div>
+                        <a href="registro.html" class="link" id="registro-link" style="background-color: rgb(192, 192, 192);">
+                            <img src="registro.png" alt="Registro" class="icon">
+                            <span class="title">Registro de usuarios</span>
+                        </a>
+                    </div>
+                    <a href="index.html" class="link" style="background-color: white;">
+                        <img src="inventario.png" alt="Inventario" class="icon">
+                        <span class="title">Inventario</span>
+                    </a>
+                    <a href="facturacion.html" class="link" style="background-color: rgb(192, 192, 192);">
+                        <img src="factura.png" alt="Facturación" class="icon">
+                        <span class="title">Facturación</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sección de acciones (Registrar, Editar, Eliminar) -->
+        <div id="registro-acciones" class="acciones">
+            <a href="registrarproducto.html" onclick="openRegisterModal()">
+                Registrar producto
+                <img src="registrarproducto.png" width="30" alt="registrarproducto">
+            </a>
+            <div class="separator"></div>
+            <a href="stock.html">
+                Stock
+                <img src="clicstock.png" width="30" alt="stock">
+            </a>
+            <div class="separator"></div>
+            <a href="generarreporte.html">
+                Generar reporte
+                <img src="generarreporte.png" width="30" alt="generarreporte">
+            </a>
+        </div>
+
+        <!-- Tabla de productos -->
+        <div class="container-fluid">
+            <br>
+            <table class="custom-table">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Categoría</th>
+                        <th>Cantidad en stock</th>
+                        <th>Actualizar stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producto A</td>
+                        <td>Oficinas</td>
+                        <td id="stock-value">50</td>
+                        <td>
+                            <form id="stock-form">
+                                <label for="quantity">Actualizar:</label>
+                                <input type="number" id="quantity" name="quantity" min="1" max="100" value="70">
+                                <input type="submit" value="Actualizar">
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>  
+    </div>
+
+    <script>
+        // Agrega un evento al formulario para cambiar el valor de stock al número ingresado
+        document.getElementById("stock-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que el formulario se envíe
+
+            // Obtiene el valor ingresado en el campo de cantidad
+            var newStock = document.getElementById("quantity").value;
+
+            // Cambia el valor de stock en la tabla al número ingresado
+            document.getElementById("stock-value").textContent = newStock;
+        });
+    </script>
+</body>
+</html>

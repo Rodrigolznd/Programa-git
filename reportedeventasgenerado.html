@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte de Ventas</title>
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Fondo gris claro */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* Fondo blanco */
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .report-table th, .report-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .report-table th {
+            background-color: #f4f4f4;
+        }
+
+        .total-general {
+            font-weight: bold;
+            text-align: right;
+            padding: 10px 0;
+        }
+
+        .print-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .print-button:hover {
+            background-color: #0056b3;
+        }
+
+
+ 
+    
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <nav>
+                <a href="registro.html" class="link" style="background-color: rgb(192, 192, 192);">
+                    <img src="registro.png" alt="Registro" class="icon">
+                    <span class="title">Registro de usuarios</span>
+                </a>
+                <a href="index.html" class="link" style="background-color: white;">
+                    <img src="inventario.png" alt="Inventario" class="icon">
+                    <span class="title">Inventario</span>
+                </a>
+                <a href="facturacion.html" class="link" style="background-color: rgb(192, 192, 192);">
+                    <img src="factura.png" alt="Facturación" class="icon">
+                    <span class="title">Facturación</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Reporte de Ventas</h1>
+        <div id="reportContent">
+            <!-- Aquí se generará el contenido del reporte -->
+        </div>
+        <button class="print-button" onclick="window.print()">Imprimir Reporte</button>
+    </div>
+
+    <script>
+        function generateReport() {
+            // Ajusta los datos del reporte según la lógica necesaria
+            const reportHtml = `
+                <h2>Periodo: 01/09/2024 - 02/09/2024</h2>
+                <table class="report-table">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cliente</th>
+                            <th>Fecha de venta</th>
+                            <th>Cantidad</th>
+                            <th>Total Venta (COP)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sofá</td>
+                            <td>Carlos Ruiz</td>
+                            <td>01/09/2024</td>
+                            <td>1</td>
+                            <td>500.000</td>
+                        </tr>
+                        <tr>
+                            <td>Televisor</td>
+                            <td>Maria Lopez</td>
+                            <td>01/09/2024</td>
+                            <td>2</td>
+                            <td>900.000</td>
+                        </tr>
+                        <tr>
+                            <td>Escritorio oficina</td>
+                            <td>Juan Perez</td>
+                            <td>01/09/2024</td>
+                            <td>1</td>
+                            <td>800.000</td>
+                        </tr>
+                        <tr>
+                            <td>Cama</td>
+                            <td>Ana Garcia</td>
+                            <td>02/09/2024</td>
+                            <td>1</td>
+                            <td>750.000</td>
+                        </tr>
+                        <tr>
+                            <td>Comedor</td>
+                            <td>Luis Martinez</td>
+                            <td>02/09/2024</td>
+                            <td>1</td>
+                            <td>450.000</td>
+                        </tr>
+                        <tr>
+                            <td>Estantería</td>
+                            <td>Patricia Gomez</td>
+                            <td>02/09/2024</td>
+                            <td>1</td>
+                            <td>320.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="total-general">Total General (COP): 3.720.000</div>
+            `;
+            document.getElementById('reportContent').innerHTML = reportHtml;
+        }
+
+        // Generar el reporte al cargar la página
+        window.onload = generateReport;
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+

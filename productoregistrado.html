@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventario</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <nav>
+                <div>
+                    <a href="registro.html" class="link" id="registro-link" style="background-color: rgb(192, 192, 192);">
+                    <img src="registro.png" alt="Registro" class="icon">
+                    <span class="title">Registro de usuarios</span>
+                </a></div>
+                <a href="index.html" class="link" style="background-color: white;">
+                    <img src="inventario.png" alt="Inventario" class="icon">
+                    <span class="title">Inventario</span>
+                </a>
+                <a href="facturacion.html" class="link" style="background-color: rgb(192, 192, 192);">
+                    <img src="factura.png" alt="Facturación" class="icon">
+                    <span class="title">Facturación</span>
+                </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+     </div>    
+     <div class="main-container">
+        <!-- Sección de acciones (Registrar, Editar, Eliminar) -->
+        <div id="registro-acciones" class="acciones">
+            <a href="registrarproducto.html" onclick="openRegisterModal()">
+                Registrar producto
+                <img src="registrarproducto.png" width="30" alt="registrarproducto">
+            </a>
+            <div class="separator"></div>
+            <a href="stock.html">
+                Stock
+                <img src="stock.png" width="30" alt="stock">
+            </a>
+            <div class="separator"></div>
+            <a href="generarreporte.html">
+                Generar reporte
+                <img src="generarreporte.png" width="30" alt="generarreporte">
+            </a>
+         </div>    
+
+        <!-- Tabla de productos -->
+        <div class="container-fluid">
+            <br>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Nombre del producto</th>
+                  <th>Descripción</th>
+                  <th>Precio</th>
+                  <th>Categoría</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Computador portatil hp</td>
+                  <td>Ram 8 gb</td>
+                  <td>700.000</td>
+                  <td>Electronica</td>
+                </tr>
+                <tr>
+                    <td>Sofá</td>
+                    <td>Color beige</td>
+                    <td>1.000.000</td>
+                    <td>Muebles</td>
+                  </tr>
+              </tbody>
+            </table>
+        </div>  
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

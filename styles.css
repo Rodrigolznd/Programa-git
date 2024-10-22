@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #d3d3d3; /* Gris claro */
+    padding: 10px 20px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 140px;
+    margin-right: 120px; /* Espacio de 150px después del logo */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin-right: 70px; /* Espacio después de cada enlace */
+    padding: 10px;
+}
+
+.icon {
+    width: 37px; /* Ajusta el tamaño del icono según sea necesario */
+    height: 37px; /* Ajusta la altura del icono según sea necesario */
+    margin-bottom: 5px; /* Espacio entre la imagen y el título */
+}
+
+.title {
+    font-size: 16px;
+}
+
+/* Estilo para el contenedor principal */
+.main-container {
+    border: 2px solid black; /* Borde negro alrededor del contenedor */
+    margin: 20px auto;
+    width: 80%;
+    height: 400px; /* Ajusta la altura del contenedor */
+    overflow-y: auto; /* Habilita el scroll vertical */
+    background-color: #f0f0f0; /* Fondo gris claro */
+    padding: 10px;
+}
+
+/* Acciones a la izquierda y con separación */
+.acciones {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    padding: 10px;
+    justify-content: flex-start; /* Alineación a la izquierda */
+}
+
+.acciones a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.acciones img {
+    margin-left: 10px; /* Espacio entre el texto y el icono */
+    vertical-align: middle; /* Alinea el icono con el texto */
+}
+
+/* Separador entre los enlaces */
+.separator {
+    border-left: 2px solid #333;
+    height: 30px;
+    margin: 15px;
+}
+
+/* Estilo para la tabla */
+.container-fluid {
+    margin: 20px auto;
+    width: 100%;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid black; /* Bordes negros en la tabla */
+    padding: 10px;
+    text-align: left;
+}
+
+.custom-table th {
+    background-color: rgb(195, 195, 195);
+}

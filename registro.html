@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semi-transparente */
+        }
+
+        .modal-content {
+            position: absolute;
+            top: 100px; /* Ajusta según la posición deseada */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px; /* Ancho del formulario */
+            background-color: rgb(195, 195, 195); /* Fondo gris */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            position: relative; /* Necesario para posicionar el botón de cierre */
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .close {
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .modal-content label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .modal-content input,
+        .modal-content select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .modal-content .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .modal-content .buttons button {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <nav>
+                    <a href="index.html" class="link" id="registro-link" style="background-color: white;">
+                        <img src="registro.png" alt="Registro" class="icon">
+                        <span class="title">Registro de usuarios</span>
+                    </a>
+                    <a href="inventario.html" class="link" style="background-color: rgb(192, 192, 192);">
+                        <img src="inventario.png" alt="Inventario" class="icon">
+                        <span class="title">Inventario</span>
+                    </a>
+                    <a href="facturacion.html" class="link" style="background-color: rgb(192, 192, 192);">
+                        <img src="factura.png" alt="Facturación" class="icon">
+                        <span class="title">Facturación</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor principal con scroll -->
+    <div class="main-container">
+        <!-- Sección de acciones (Registrar, Editar, Eliminar) -->
+        <div id="registro-acciones" class="acciones">
+            <a href="registrarusuario.html" onclick="openRegisterModal()">
+                Registrar
+                <img src="registrar.png" width="30" alt="Registrar">
+            </a>
+            <div class="separator"></div>
+            <a href="editarusuario.html">
+                Editar
+                <img src="editar.png" width="30" alt="Editar">
+            </a>
+            <div class="separator"></div>
+            <a href="eliminarusuario.html">
+                Eliminar
+                <img src="eliminar.png" width="30" alt="Eliminar">
+            </a>
+         </div>    
+
+        <!-- Tabla de usuarios -->
+        <div class="container-fluid">
+            <br>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Nombre de usuario</th>
+                  <th>Rol</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+        </div>  
+    </div> <!-- Fin del contenedor principal -->
+
+    <!-- Modal para registrar usuario -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeRegisterModal()">&times;</span>
+            </div>
+            <h2>Registrar Usuario</h2>
+            <form id="registerForm">
+                <label for="username">Nombre de usuario:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Clave:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <label for="role">Rol:</label>
+                <select id="role" name="role">
+                    <option value="Administrador">Administrador</option>
+                    <option value="Usuario">Usuario</option>
+                    <option value="Cliente">Cliente</option>
+                </select>
+                <br>
+                <label for="status">Estado:</label>
+                <select id="status" name="status">
+                    <option value="Activo">Activo</option>
+                    <option value="Inactivo">Inactivo</option>
+                </select>
+                <br>
+                <div class="buttons">
+                    <button type="submit">Registrar</button>
+                    <button type="button" onclick="closeRegisterModal()">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

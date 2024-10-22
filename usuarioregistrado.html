@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo">
+            </div>
+            <div>
+                <nav>
+                    <a href="index.html" class="link" id="registro-link" style="background-color: white;">
+                        <img src="registro.png" alt="Registro" class="icon">
+                        <span class="title">Registro de usuarios</span>
+                    </a>
+                    <a href="inventario.html" class="link" style="background-color: rgb(192, 192, 192);">
+                        <img src="inventario.png" alt="Inventario" class="icon">
+                        <span class="title">Inventario</span>
+                    </a>
+                    <a href="facturacion.html" class="link" style="background-color: rgb(192, 192, 192);">
+                        <img src="factura.png" alt="Facturación" class="icon">
+                        <span class="title">Facturación</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor principal con scroll -->
+    <div class="main-container">
+        <!-- Sección de acciones (Registrar, Editar, Eliminar) -->
+        <div id="registro-acciones" class="acciones">
+            <a href="registrarusuario.html">
+                Registrar
+                <img src="registrar.png" width="30" alt="Registrar">
+            </a>
+            <div class="separator"></div>
+            <a href="editarusuario.html">
+                Editar
+                <img src="editar.png" width="30" alt="Editar">
+            </a>
+            <div class="separator"></div>
+            <a href="eliminarusuario.html">
+                <a href="eliminarusuario.html">
+                Eliminar
+                <img src="eliminar.png" width="30" alt="Eliminar">
+            </a>
+         </div>    
+
+        <!-- Tabla de usuarios -->
+        <div class="container-fluid">
+            <br>
+            <table class="custom-table">
+              <thead>
+                <tr>
+                  <th>Nombre de usuario</th>
+                  <th>Rol</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pepito Perez</td>
+                  <td>Administrador</td>
+                  <td>Activo</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>  
+    </div> <!-- Fin del contenedor principal -->
+
+    <script src="script.js"></script>
+</body>
+</html>
